@@ -106,7 +106,7 @@ namespace LR5
             string[] input = File.ReadAllLines(path); //чтение массива строк
             for (int i = 0; i < input.Length; ++i)
             {
-                Regex regex = new Regex(@"([A-Za-z])+\s([A-Za-z])+\s([A-Za-z])+[,]\s([0-9]+)\s([A-Za-z])+[,]\s[g][.]([A-Za-z])+[.]");
+                Regex regex = new Regex(@"([A-Za-z])+\s([A-Za-z])+\s([A-Za-z])+[,]\s([1-9][0-9]+)\s([A-Za-z])+[,]\s[g][.]([A-Za-z])+[.]");
                 if (regex.IsMatch(input[i]))
                 {
                     Console.WriteLine(regex.Match(input[i]));
@@ -116,6 +116,47 @@ namespace LR5
                     // Console.WriteLine("Не найдено");
                 }
             }
+        }
+
+
+
+        public static void Z5a()
+        {
+            string path = "C:\\Labs\\AllLabs\\LR5\\LR5\\testData.xml";
+            Regex regex = new Regex(@"[А-Яа-я]+\s[А-Яа-я]+\s[А-Яа-я]+[,]\s[1-9][0-9]+\s[А-Яа-я]+[,]\s[г][.]\s[А-Яа-я]+[.]");
+            string[] input = File.ReadAllLines(path); //чтение массива строк
+            for (int i = 0; i < input.Length; ++i)
+            {
+                if (regex.IsMatch(input[i]))
+                {
+                    Console.WriteLine(regex.Match(input[i]));
+                }
+                else
+                {
+                    Console.WriteLine("Такого не знаем");
+                }
+                    
+            }
+
+        }
+        public static void Z5b()
+        {
+            string path = "C:\\Labs\\AllLabs\\LR5\\LR5\\testData.xml";
+            Regex regex = new Regex(@"(([1-9].))+");
+            string[] input = File.ReadAllLines(path); //чтение массива строк
+            for (int i = 0; i < input.Length; ++i)
+            {
+                if (regex.IsMatch(input[i]))
+                {
+                    Console.WriteLine(regex.Match(input[i]));
+                }
+                else
+                {
+                 
+                }
+
+            }
+
         }
     }
 }
