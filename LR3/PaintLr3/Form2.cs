@@ -35,5 +35,33 @@ namespace PaintLr3
                 return value;
             }
         }
+
+        public int N
+        {
+            get
+            {
+                string text = textBox1.Text;
+                int value = Convert.ToInt32(text);
+                return value;
+            }
+        }
+
+        bool _canceled = false;
+        public bool Canceled
+        {
+            get { return _canceled; }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            _canceled = false;
+            Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            _canceled = true;
+            Close();
+        }
     }
 }

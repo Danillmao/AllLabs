@@ -40,6 +40,8 @@
             this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolsPanel = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
@@ -49,6 +51,8 @@
             this.brushSizeBar = new System.Windows.Forms.TrackBar();
             this.drawPanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.colorDialog2 = new System.Windows.Forms.ColorDialog();
             this.menuStrip1.SuspendLayout();
             this.toolsPanel.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -145,12 +149,35 @@
             // toolsPanel
             // 
             this.toolsPanel.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.toolsPanel.Controls.Add(this.panel1);
+            this.toolsPanel.Controls.Add(this.button5);
             this.toolsPanel.Controls.Add(this.groupBox1);
+            this.toolsPanel.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.toolsPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.toolsPanel.Location = new System.Drawing.Point(0, 24);
             this.toolsPanel.Name = "toolsPanel";
             this.toolsPanel.Size = new System.Drawing.Size(167, 426);
             this.toolsPanel.TabIndex = 1;
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(0, 146);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(164, 277);
+            this.panel1.TabIndex = 2;
+            // 
+            // button5
+            // 
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button5.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.button5.Image = global::PaintLr3.Properties.Resources._574b20bf49223154fd77eb44;
+            this.button5.Location = new System.Drawing.Point(12, 117);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(25, 23);
+            this.button5.TabIndex = 1;
+            this.button5.Text = "button5";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // groupBox1
             // 
@@ -303,5 +330,9 @@
         private PictureBox pictureBox1;
         private ToolStripMenuItem очиститьToolStripMenuItem;
         private Label label1;
+        private Button button5;
+        private ColorDialog colorDialog1;
+        private Panel panel1;
+        private ColorDialog colorDialog2;
     }
 }

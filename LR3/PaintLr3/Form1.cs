@@ -10,8 +10,8 @@ namespace PaintLr3
         {
             InitializeComponent();
             CreateBlank(pictureBox1.Width = 2000, pictureBox1.Height = 1000);
-            
-
+            colorDialog1.FullOpen = true;
+           
 
         }
 
@@ -47,7 +47,7 @@ namespace PaintLr3
             
             Color SelectedColor
             {
-                get{ return Color.Red; }
+                get{ return colorDialog1.Color; }
             }
 
             int SelectedSize
@@ -83,7 +83,6 @@ namespace PaintLr3
             {
                 _selectedBrush.Draw(pictureBox1.Image as Bitmap, _x, _y);
                 pictureBox1.Refresh();
-                
             }
         }
 
@@ -99,9 +98,19 @@ namespace PaintLr3
 
         private void brushSizeBar_Scroll(object sender, EventArgs e)
         {
-            
             label1.Text = String.Format("Ðàçìåð: {0}", brushSizeBar.Value.ToString());
-            _selectedBrush.Size= brushSizeBar.Value;
+
+            try
+            {
+                
+                _selectedBrush.Size = brushSizeBar.Value;
+            }
+            catch (Exception)
+            {
+
+               return;
+            }
+            
         }
 
         private void âûõîäToolStripMenuItem_Click(object sender, EventArgs e)
@@ -111,7 +120,13 @@ namespace PaintLr3
 
         private void ñîçäàòüToolStripMenuItem_Click(object sender, EventArgs e)
         {
-          
+            
+            Form2 form= new Form2();
+            form.ShowDialog();
+            if (form.Canceled == false)
+            {
+                CreateBlank(form.W, form.H);
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -121,8 +136,6 @@ namespace PaintLr3
 
         private void î÷èñòèòüToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
-                
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -134,5 +147,15 @@ namespace PaintLr3
         {
             _selectedBrush = new Eraser(SelectedColor, SelectedSize);
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                _selectedBrush.BrushColor = colorDialog1.Color;
+                button5.BackColor = colorDialog1.Color;
+            }
+        }
+        
     }
 }
