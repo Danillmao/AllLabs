@@ -1,15 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace PaintLr3
 {
-    internal class QuadBrush : Brush
+    internal class Eraser : Brush
     {
-        public QuadBrush(Color brushColor, int size) 
-            : base(brushColor, size) 
+        public Eraser(Color brushColor, int size)
+            : base(brushColor, size)
         {
         }
         public override void Draw(Bitmap image, int x, int y)
@@ -20,7 +22,7 @@ namespace PaintLr3
                 {
                     for (int x0 = x - Size; x0 < x + Size; x0++)
                     {
-                        image.SetPixel(x0, y0, BrushColor);
+                        image.SetPixel(x0, y0, Color.White);
 
                     }
                 }
@@ -34,3 +36,11 @@ namespace PaintLr3
         }
     }
 }
+/*
+ Pen pen = new Pen(BrushColor, 1);
+            Graphics e = Graphics.FromImage(image);
+            int width = Size;
+            int height = Size;
+            e.DrawEllipse(pen, x - 5, y - 5, width, height);
+
+ */

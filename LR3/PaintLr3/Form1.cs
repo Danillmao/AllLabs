@@ -1,4 +1,6 @@
+using System.Reflection.Emit;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace PaintLr3
 {
@@ -7,7 +9,10 @@ namespace PaintLr3
         public Form1()
         {
             InitializeComponent();
-            CreateBlank(pictureBox1.Width, pictureBox1.Height);
+            CreateBlank(pictureBox1.Width = 2000, pictureBox1.Height = 1000);
+            
+
+
         }
 
         Color DefaultColor
@@ -47,7 +52,9 @@ namespace PaintLr3
 
             int SelectedSize
             {
-                get{ return brushSizeBar.Value; }             
+                get{ return brushSizeBar.Value; }   
+                set { brushSizeBar.Value = value;}
+           
             }
 
         Brush _selectedBrush;
@@ -76,8 +83,10 @@ namespace PaintLr3
             {
                 _selectedBrush.Draw(pictureBox1.Image as Bitmap, _x, _y);
                 pictureBox1.Refresh();
+                
             }
         }
+
         private void button1_Click(object sender, EventArgs e)
         {
             _selectedBrush = new QuadBrush(SelectedColor, SelectedSize);
@@ -90,7 +99,9 @@ namespace PaintLr3
 
         private void brushSizeBar_Scroll(object sender, EventArgs e)
         {
-
+            
+            label1.Text = String.Format("Ðàçìåð: {0}", brushSizeBar.Value.ToString());
+            _selectedBrush.Size= brushSizeBar.Value;
         }
 
         private void âûõîäToolStripMenuItem_Click(object sender, EventArgs e)
@@ -105,7 +116,23 @@ namespace PaintLr3
 
         private void button3_Click(object sender, EventArgs e)
         {
+            _selectedBrush = new RingBrush(SelectedColor, SelectedSize);
+        }
 
+        private void î÷èñòèòüToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+                
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            _selectedBrush = new CircleBrush(SelectedColor, SelectedSize);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            _selectedBrush = new Eraser(SelectedColor, SelectedSize);
         }
     }
 }
