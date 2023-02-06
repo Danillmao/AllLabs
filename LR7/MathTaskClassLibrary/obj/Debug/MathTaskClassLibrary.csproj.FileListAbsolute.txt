@@ -1,0 +1,6 @@
+C:\Labs\AllLabs\LR7\MathTaskClassLibrary\bin\Debug\MathTaskClassLibrary.dll
+C:\Labs\AllLabs\LR7\MathTaskClassLibrary\bin\Debug\MathTaskClassLibrary.pdb
+C:\Labs\AllLabs\LR7\MathTaskClassLibrary\obj\Debug\MathTaskClassLibrary.csproj.AssemblyReference.cache
+C:\Labs\AllLabs\LR7\MathTaskClassLibrary\obj\Debug\MathTaskClassLibrary.csproj.CoreCompileInputs.cache
+C:\Labs\AllLabs\LR7\MathTaskClassLibrary\obj\Debug\MathTaskClassLibrary.dll
+C:\Labs\AllLabs\LR7\MathTaskClassLibrary\obj\Debug\MathTaskClassLibrary.pdb

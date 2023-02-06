@@ -1,0 +1,11 @@
+C:\Labs\AllLabs\LR6WF\LR6WF\bin\Debug\LR6WF.exe.config
+C:\Labs\AllLabs\LR6WF\LR6WF\bin\Debug\LR6WF.exe
+C:\Labs\AllLabs\LR6WF\LR6WF\bin\Debug\LR6WF.pdb
+C:\Labs\AllLabs\LR6WF\LR6WF\obj\Debug\LR6WF.csproj.AssemblyReference.cache
+C:\Labs\AllLabs\LR6WF\LR6WF\obj\Debug\LR6WF.csproj.SuggestedBindingRedirects.cache
+C:\Labs\AllLabs\LR6WF\LR6WF\obj\Debug\LR6WF.Form1.resources
+C:\Labs\AllLabs\LR6WF\LR6WF\obj\Debug\LR6WF.Properties.Resources.resources
+C:\Labs\AllLabs\LR6WF\LR6WF\obj\Debug\LR6WF.csproj.GenerateResource.cache
+C:\Labs\AllLabs\LR6WF\LR6WF\obj\Debug\LR6WF.csproj.CoreCompileInputs.cache
+C:\Labs\AllLabs\LR6WF\LR6WF\obj\Debug\LR6WF.exe
+C:\Labs\AllLabs\LR6WF\LR6WF\obj\Debug\LR6WF.pdb

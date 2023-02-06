@@ -156,6 +156,10 @@ namespace PaintLr3
                 button5.BackColor = colorDialog1.Color;
             }
         }
-        
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
