@@ -8,6 +8,7 @@ namespace LR6WF
 {
         public class Integrator
         {
+        
             private readonly Equation equation;
 
             public Integrator(Equation equation)
@@ -20,7 +21,11 @@ namespace LR6WF
                 this.equation = equation;
             }
 
-            public double Integrate(double x1, double x2)
+        public Integrator()
+        {
+        }
+
+        public double Integrate(double x1, double x2)
             {
 
                 if (x1 >= x2)

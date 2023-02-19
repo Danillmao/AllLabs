@@ -9,3 +9,4 @@ C:\Labs\AllLabs\LR6WF\LR6WF\obj\Debug\LR6WF.csproj.GenerateResource.cache
 C:\Labs\AllLabs\LR6WF\LR6WF\obj\Debug\LR6WF.csproj.CoreCompileInputs.cache
 C:\Labs\AllLabs\LR6WF\LR6WF\obj\Debug\LR6WF.exe
 C:\Labs\AllLabs\LR6WF\LR6WF\obj\Debug\LR6WF.pdb
+C:\Labs\AllLabs\LR6WF\LR6WF\obj\Debug\LR6WF.HomeDialog.resources
