@@ -18,8 +18,8 @@ namespace PaintLr3
         {
             Pen pen = new Pen(BrushColor, 1);
             Graphics e = Graphics.FromImage(image);
-            int width = Size;
-            int height = Size;
+            int width = Size*2;
+            int height = Size*2;
             e.DrawEllipse(pen, x - 5, y - 5, width , height);
         }
     }

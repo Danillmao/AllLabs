@@ -1,32 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Labs\\AllLabs\\LR5\\LR5\\LR5.csproj": {}
+    "E:\\Semen\\AllLabs\\LR5\\LR5\\LR5.csproj": {}
   },
   "projects": {
-    "C:\\Labs\\AllLabs\\LR5\\LR5\\LR5.csproj": {
+    "E:\\Semen\\AllLabs\\LR5\\LR5\\LR5.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Labs\\AllLabs\\LR5\\LR5\\LR5.csproj",
+        "projectUniqueName": "E:\\Semen\\AllLabs\\LR5\\LR5\\LR5.csproj",
         "projectName": "LR5",
-        "projectPath": "C:\\Labs\\AllLabs\\LR5\\LR5\\LR5.csproj",
-        "packagesPath": "C:\\Users\\lesic\\.nuget\\packages\\",
-        "outputPath": "C:\\Labs\\AllLabs\\LR5\\LR5\\obj\\",
+        "projectPath": "E:\\Semen\\AllLabs\\LR5\\LR5\\LR5.csproj",
+        "packagesPath": "C:\\NugetPackages",
+        "outputPath": "E:\\Semen\\AllLabs\\LR5\\LR5\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\lesic\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\pibo0121033\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\nuget.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\InstalledNugetPackages\\": {},
+          "C:\\NugetPackages\\": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -50,8 +48,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -60,7 +57,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -10,3 +10,15 @@ C:\Labs\AllLabs\LR6WF\LR6WF\obj\Debug\LR6WF.csproj.CoreCompileInputs.cache
 C:\Labs\AllLabs\LR6WF\LR6WF\obj\Debug\LR6WF.exe
 C:\Labs\AllLabs\LR6WF\LR6WF\obj\Debug\LR6WF.pdb
 C:\Labs\AllLabs\LR6WF\LR6WF\obj\Debug\LR6WF.HomeDialog.resources
+E:\Semen\AllLabs\LR6WF\LR6WF\bin\Debug\LR6WF.exe.config
+E:\Semen\AllLabs\LR6WF\LR6WF\bin\Debug\LR6WF.exe
+E:\Semen\AllLabs\LR6WF\LR6WF\bin\Debug\LR6WF.pdb
+E:\Semen\AllLabs\LR6WF\LR6WF\obj\Debug\LR6WF.csproj.AssemblyReference.cache
+E:\Semen\AllLabs\LR6WF\LR6WF\obj\Debug\LR6WF.csproj.SuggestedBindingRedirects.cache
+E:\Semen\AllLabs\LR6WF\LR6WF\obj\Debug\LR6WF.Form1.resources
+E:\Semen\AllLabs\LR6WF\LR6WF\obj\Debug\LR6WF.HomeDialog.resources
+E:\Semen\AllLabs\LR6WF\LR6WF\obj\Debug\LR6WF.Properties.Resources.resources
+E:\Semen\AllLabs\LR6WF\LR6WF\obj\Debug\LR6WF.csproj.GenerateResource.cache
+E:\Semen\AllLabs\LR6WF\LR6WF\obj\Debug\LR6WF.csproj.CoreCompileInputs.cache
+E:\Semen\AllLabs\LR6WF\LR6WF\obj\Debug\LR6WF.exe
+E:\Semen\AllLabs\LR6WF\LR6WF\obj\Debug\LR6WF.pdb

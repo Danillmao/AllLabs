@@ -11,7 +11,7 @@ namespace PaintLr3
             InitializeComponent();
             CreateBlank(pictureBox1.Width = 2000, pictureBox1.Height = 1000);
             colorDialog1.FullOpen = true;
-           
+            _selectedBrush = new QuadBrush(SelectedColor, SelectedSize);
 
         }
 
@@ -58,6 +58,8 @@ namespace PaintLr3
             }
 
         Brush _selectedBrush;
+
+       
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
         {
             if (_selectedBrush == null)
@@ -85,7 +87,6 @@ namespace PaintLr3
                 pictureBox1.Refresh();
             }
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             _selectedBrush = new QuadBrush(SelectedColor, SelectedSize);
@@ -136,6 +137,7 @@ namespace PaintLr3
 
         private void î÷èñòèòüToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -159,7 +161,20 @@ namespace PaintLr3
 
         private void button7_Click(object sender, EventArgs e)
         {
-           
+            var button = sender as System.Windows.Forms.Button;
+            _selectedBrush.BrushColor = button.BackColor;
+
+        }
+
+        private void changeColor_Click(object sender, EventArgs e)
+        {
+            var button = sender as System.Windows.Forms.Button;
+                _selectedBrush.BrushColor = button.BackColor;
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            _selectedBrush = new KrestKist(SelectedColor, SelectedSize);
         }
     }
 }

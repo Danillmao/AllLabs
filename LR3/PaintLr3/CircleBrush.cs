@@ -18,8 +18,8 @@ namespace PaintLr3
         {
             SolidBrush brush = new SolidBrush(BrushColor);
             Graphics e = Graphics.FromImage(image);
-            int width = Size;
-            int height = Size;
+            int width = Size*2;
+            int height = Size*2;
             e.FillEllipse(brush, x - 5, y - 5, width, height);
             
         }

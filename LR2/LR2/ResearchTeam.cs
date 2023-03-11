@@ -56,7 +56,7 @@ namespace LR2
         { get { return paperList; }
           set{ paperList = value; }
         }
-        public Paper LastPaper
+        public Paper? LastPaper
         {
             get
             {
@@ -88,7 +88,7 @@ namespace LR2
         }
         public string ToFullString()
         {
-            return ($"Theme: {themeName}, OrgName: {orgName}, RegNumber: {regNumber}, ResearchTime: {frame}, PapersList {paperList.ToString}");
+            return ($"Theme: {themeName}, OrgName: {orgName}, RegNumber: {regNumber}, ResearchTime: {frame}, PapersList {paperList}");
         }
 
         public string ToShortString()
