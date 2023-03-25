@@ -16,51 +16,97 @@ namespace LR6WF
     public partial class Form1 : Form
     {
         public Form1()
-        { 
-            InitializeComponent();
-            ClassesFunction();
-            DrawFunction();
-            
-        }
-
-        public void ClassesFunction()
         {
-            /*
+            InitializeComponent();
+            comboBox1.SelectedIndex = 0;
+            textBox1.Text ="1";
+            textBox2.Text = "10";
+            textBox3.Text = "100";
+
+        }
+        void QuadDrawFunction()
+        {
             Equation e = new QuadEquation(0, 20, 0);    //создаем объект класса "кв. уравнение"
             Integrator i1 = new Integrator(e); //создаем интегратор для этого уравнения
             double integrValue = i1.Integrate(10, 30); //вызываем интегрирование на интвервале 10;30
 
-            Equation f = new Becuation(1);
+            Series mySeriesOfPoint = new Series("1st func");
+            mySeriesOfPoint.ChartType = SeriesChartType.Line;
+            double x1 = int.Parse(textBox1.Text);
+            double x2 = int.Parse(textBox2.Text);
+            double N = int.Parse(textBox3.Text);
+            double h = (x2 - x1) / N;
+            for (double x = x1; x <= x2; x +=h)
+            {
+                double y = e.GetValue(x);
+                mySeriesOfPoint.Points.AddXY(x, y);
+            }
+            chart1.Series.Add(mySeriesOfPoint);
+        }
+        void SecondDrawFunction()
+        {
+            Equation f = new Becuation(10);
             Integrator i2 = new Integrator(f);
             double integrValue2 = i2.Integrate(1, 2);
-          */
-            Equation g = new Cequation(1, 2);
-            Integrator i3 = new Integrator(g);
-            double integrValue3 = i3.Integrate(1, 2);  
-            Timed.LMAO = integrValue3;
-        }
-        void DrawFunction(/*double x1, double x2, Equation equation*/)
-        {
 
             Series mySeriesOfPoint = new Series("1st func");
             mySeriesOfPoint.ChartType = SeriesChartType.Line;
-            for (double x = 2; x <= 3; x++)
+            double x1 = int.Parse(textBox1.Text);
+            double x2 = int.Parse(textBox2.Text);
+            double N = int.Parse(textBox3.Text);
+            double h = (x2 - x1) / N;
+            for (double x = x1; x <= x2; x += h)
             {
-                mySeriesOfPoint.Points.AddXY(x, x*x+20*x+0);
+                double y = f.GetValue(x);
+                mySeriesOfPoint.Points.AddXY(x, y);
             }
-            //Добавляем созданный набор точек в Chart
             chart1.Series.Add(mySeriesOfPoint);
-            
+        }
+        void ThirdDrawFunction()
+        {
+            Equation g = new Cequation(1, 2);
+            Integrator i3 = new Integrator(g);
+            double integrValue3 = i3.Integrate(1, 2);
+
+            Series mySeriesOfPoint = new Series("1st func");
+            mySeriesOfPoint.ChartType = SeriesChartType.Line;
+            double x1 = int.Parse(textBox1.Text);
+            double x2 = int.Parse(textBox2.Text);
+            double N = int.Parse(textBox3.Text);
+            double h = (x2 - x1) / N;
+            for (double x = x1; x <= x2; x += h)
+            {
+                double y = g.GetValue(x);
+                mySeriesOfPoint.Points.AddXY(x, y);
+            }
+            chart1.Series.Add(mySeriesOfPoint);
         }
         public void button2_Click_1(object sender, EventArgs e)
         {
-          
+           
+            chart1.Series.Clear();
+            //comboBox1.SelectedIndex = 0;
+            //chart1.Dispose();
+            if (comboBox1.SelectedIndex == 0)
+            {
+                QuadDrawFunction();
+            }
+            else if (comboBox1.SelectedIndex == 1)
+            {
+                SecondDrawFunction();
+            } 
+            else if (comboBox1.SelectedIndex == 2)
+            {
+                ThirdDrawFunction();
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
+
+     
     }
 }
 /*

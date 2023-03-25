@@ -16,7 +16,7 @@ namespace LR6WF
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new HomeDialog());
+            Application.Run(new Form1());
         }
     }
 }
