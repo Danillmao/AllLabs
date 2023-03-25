@@ -24,10 +24,9 @@ namespace LR6WF
             textBox3.Text = "100";
 
         }
-        void QuadDrawFunction()
+        void DrawFunction(Equation equation)
         {
-            Equation e = new QuadEquation(0, 20, 0);    //создаем объект класса "кв. уравнение"
-            Integrator i1 = new Integrator(e); //создаем интегратор для этого уравнения
+            Integrator i1 = new Integrator(equation); //создаем интегратор для этого уравнения
             double integrValue = i1.Integrate(10, 30); //вызываем интегрирование на интвервале 10;30
 
             Series mySeriesOfPoint = new Series("1st func");
@@ -38,48 +37,26 @@ namespace LR6WF
             double h = (x2 - x1) / N;
             for (double x = x1; x <= x2; x +=h)
             {
-                double y = e.GetValue(x);
+                double y = equation.GetValue(x);
                 mySeriesOfPoint.Points.AddXY(x, y);
             }
             chart1.Series.Add(mySeriesOfPoint);
+
+        }
+        void QuadDrawFunction()
+        { 
+            Equation e = new QuadEquation(0, 20, 0);    //создаем объект класса "кв. уравнение"
+            DrawFunction(e);
         }
         void SecondDrawFunction()
         {
-            Equation f = new Becuation(10);
-            Integrator i2 = new Integrator(f);
-            double integrValue2 = i2.Integrate(1, 2);
-
-            Series mySeriesOfPoint = new Series("1st func");
-            mySeriesOfPoint.ChartType = SeriesChartType.Line;
-            double x1 = int.Parse(textBox1.Text);
-            double x2 = int.Parse(textBox2.Text);
-            double N = int.Parse(textBox3.Text);
-            double h = (x2 - x1) / N;
-            for (double x = x1; x <= x2; x += h)
-            {
-                double y = f.GetValue(x);
-                mySeriesOfPoint.Points.AddXY(x, y);
-            }
-            chart1.Series.Add(mySeriesOfPoint);
+            Equation e = new Becuation(1);  //создаем объект класса "кв. уравнение"
+            DrawFunction(e);
         }
         void ThirdDrawFunction()
         {
             Equation g = new Cequation(1, 2);
-            Integrator i3 = new Integrator(g);
-            double integrValue3 = i3.Integrate(1, 2);
-
-            Series mySeriesOfPoint = new Series("1st func");
-            mySeriesOfPoint.ChartType = SeriesChartType.Line;
-            double x1 = int.Parse(textBox1.Text);
-            double x2 = int.Parse(textBox2.Text);
-            double N = int.Parse(textBox3.Text);
-            double h = (x2 - x1) / N;
-            for (double x = x1; x <= x2; x += h)
-            {
-                double y = g.GetValue(x);
-                mySeriesOfPoint.Points.AddXY(x, y);
-            }
-            chart1.Series.Add(mySeriesOfPoint);
+            DrawFunction(g);
         }
         public void button2_Click_1(object sender, EventArgs e)
         {
